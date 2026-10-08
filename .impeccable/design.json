@@ -1,0 +1,789 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-04T11:04:12.000Z",
+  "title": "Design System: Klik",
+  "extensions": {
+    "colorMeta": {
+      "plum": {
+        "role": "primary",
+        "displayName": "Logo Plum",
+        "canonical": "#3c2848",
+        "note": "82% of klik logo.png. The ink of the whole system. Its opacity ladder (75 / 72 / 65 / 35%) is the only secondary-text device.",
+        "tonalRamp": [
+          "#160e1a",
+          "#241629",
+          "#2b1c34",
+          "#3c2848",
+          "#5a3d6b",
+          "#8a6b9c",
+          "#c0aacb",
+          "#efe8f2"
+        ]
+      },
+      "plum-deep": {
+        "role": "primary",
+        "displayName": "Deep Plum",
+        "canonical": "#2b1c34",
+        "note": "Pressed and settled states; the footer ground.",
+        "tonalRamp": [
+          "#100a13",
+          "#1b1120",
+          "#2b1c34",
+          "#3f2a4c",
+          "#5d4070",
+          "#8b6ba0",
+          "#c1abcf",
+          "#efe9f3"
+        ]
+      },
+      "cream": {
+        "role": "secondary",
+        "displayName": "Logo Cream",
+        "canonical": "#ffe4c4",
+        "note": "15% of the mark. Reverse ink, illustration body fill, the catalogue plane at 45%, the footer rule at 15%.",
+        "tonalRamp": [
+          "#4a3418",
+          "#5c4222",
+          "#8a6534",
+          "#b78748",
+          "#dda868",
+          "#ffc78e",
+          "#ffe4c4",
+          "#fff7eb"
+        ]
+      },
+      "orange": {
+        "role": "tertiary",
+        "displayName": "Logo Orange",
+        "canonical": "#ffa444",
+        "note": "0.7% of the mark. The single accent: bag badge, count dot, end-card action, proof stamp, the current-page underline, and hover on dense interface links. Never carries small text on a light ground.",
+        "tonalRamp": [
+          "#3d2205",
+          "#5c340a",
+          "#8a4f11",
+          "#b76a1c",
+          "#e0872c",
+          "#ffa444",
+          "#ffc887",
+          "#ffeacd"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Warm Paper",
+        "canonical": "#fbf1e2",
+        "note": "The page ground, lifted one step off the logo cream so cream still reads on it. Also the product tile.",
+        "tonalRamp": [
+          "#3d3225",
+          "#5c4c38",
+          "#8a7457",
+          "#b79c78",
+          "#d9c3a3",
+          "#eeddc4",
+          "#fbf1e2",
+          "#fffaf3"
+        ]
+      },
+      "card": {
+        "role": "neutral",
+        "displayName": "Lit Plane",
+        "canonical": "#fffdf8",
+        "note": "The surface of every raised card, the product page object frame, the bag line, the summary panel and form inputs.",
+        "tonalRamp": [
+          "#3f3d36",
+          "#5e5b51",
+          "#8b8779",
+          "#b8b3a2",
+          "#d9d5c7",
+          "#efece2",
+          "#fffdf8",
+          "#fffefc"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Warm Line",
+        "canonical": "#ebdcc8",
+        "note": "The only border colour. Structure only, never depth: section rules, spec rows, input and stepper strokes, quiet and disabled button rings.",
+        "tonalRamp": [
+          "#3a3025",
+          "#584a38",
+          "#847057",
+          "#b09877",
+          "#d2bda1",
+          "#ebdcc8",
+          "#f6eee1",
+          "#fdfaf5"
+        ]
+      },
+      "haze": {
+        "role": "neutral",
+        "displayName": "Haze",
+        "canonical": "#ffdcae",
+        "note": "Never a surface. Used only inside 80px-blurred circles behind sections as atmosphere, at 45-50% opacity.",
+        "tonalRamp": [
+          "#4a3510",
+          "#6c4d19",
+          "#9a7028",
+          "#c5923c",
+          "#e6b465",
+          "#ffcf94",
+          "#ffdcae",
+          "#fff2df"
+        ]
+      },
+      "shell": {
+        "role": "neutral",
+        "displayName": "Admin Shell",
+        "canonical": "#2b1c34",
+        "note": "The admin sidebar ground. Same value as Deep Plum, named separately because it is a layer role: operate.md's required second neutral layer, so chrome reads as a different plane from the work.",
+        "tonalRamp": [
+          "#150d19",
+          "#1e1324",
+          "#2b1c34",
+          "#3c2848",
+          "#553a66",
+          "#84699a",
+          "#bcaac9",
+          "#ece7f0"
+        ]
+      },
+      "adm-bg": {
+        "role": "neutral",
+        "displayName": "Admin Ground",
+        "canonical": "#f6f3ee",
+        "note": "The content ground behind every admin card; also table-row hover, disabled field ground and thumbnail tiles. Cooler and quieter than the storefront's paper because dense data needs the surface to recede.",
+        "tonalRamp": [
+          "#2a2620",
+          "#443e35",
+          "#5f584c",
+          "#8a8275",
+          "#b5aea2",
+          "#d9d4ca",
+          "#f6f3ee",
+          "#fdfcfa"
+        ]
+      },
+      "adm-surface": {
+        "role": "neutral",
+        "displayName": "Admin Surface",
+        "canonical": "#ffffff",
+        "note": "Plain white: every admin card, the top bar, every field, the secondary button. The only true white in the system and admin-only.",
+        "tonalRamp": [
+          "#2b2b2b",
+          "#454545",
+          "#606060",
+          "#8a8a8a",
+          "#b5b5b5",
+          "#dadada",
+          "#f2f2f2",
+          "#ffffff"
+        ]
+      },
+      "adm-line": {
+        "role": "neutral",
+        "displayName": "Admin Line",
+        "canonical": "#e7e1d7",
+        "note": "The admin's single border colour — card borders, table row rules, field strokes, the top bar's rule. The admin draws structure with a line where the storefront draws it with a shadow.",
+        "tonalRamp": [
+          "#2b2721",
+          "#443f36",
+          "#5f594d",
+          "#8a8375",
+          "#b3aca0",
+          "#e7e1d7",
+          "#f4f0ea",
+          "#fbf9f6"
+        ]
+      },
+      "ok": {
+        "role": "tertiary",
+        "displayName": "Operate Green",
+        "canonical": "#2f6f4f",
+        "note": "Admin-only semantic hue. Shipped, and in stock. Never a full-strength fill — 12% ground with the hue as the type. Forbidden on every storefront route.",
+        "tonalRamp": [
+          "#0d2117",
+          "#143324",
+          "#1e4a35",
+          "#2f6f4f",
+          "#419a6d",
+          "#6dbf95",
+          "#a9dcc3",
+          "#e2f4eb"
+        ]
+      },
+      "alert": {
+        "role": "tertiary",
+        "displayName": "Operate Rust",
+        "canonical": "#a3341f",
+        "note": "Admin-only semantic hue. Cancelled, out of stock, invalid fields, error messages and the destructive button. Reads as a rust rather than a signal red, so it belongs to the warm world. Forbidden on every storefront route.",
+        "tonalRamp": [
+          "#2c0e08",
+          "#4a170d",
+          "#711f14",
+          "#a3341f",
+          "#c85336",
+          "#dd8571",
+          "#eeb8ab",
+          "#f9e5e0"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "The page headline, one per route (.display-1). Every route has one."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section headings (.display-2): the counters, 'Also at this counter.', the empty-bag statement."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Category tile titles, newsletter heading, end-card line, bag summary heading, and the bag subtotal figure (.display-3)."
+      },
+      "body-large": {
+        "displayName": "Body Large",
+        "purpose": "The one-line product note under the price on a product page. One instance per page."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Introductory prose and the two-paragraph product story, measured 38-58ch."
+      },
+      "body-small": {
+        "displayName": "Body Small",
+        "purpose": "The working size: product names, prices, navigation, breadcrumbs, counts, spec rows, notes."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Footer column headings, provisional-status chips, and the honest note beneath a disabled control. Never an eyebrow above a heading."
+      },
+      "adm-h1": {
+        "displayName": "Admin H1",
+        "purpose": "One per admin route (.adm-h1), set by PageHead and repeated by the loading shell so the skeleton keeps the same heading. Fixed 1.5rem — never a clamp."
+      },
+      "adm-h2": {
+        "displayName": "Admin H2",
+        "purpose": "Admin card and section headings (.adm-h2): 'Recent orders', 'Needs restock', each form section, the empty state's line."
+      },
+      "adm-body": {
+        "displayName": "Admin Body",
+        "purpose": "The admin's working size (.adm-body): every table cell, field label, hint, meta line and back link. Secondary text is this size at 70% plum ink."
+      },
+      "adm-label": {
+        "displayName": "Admin Label",
+        "purpose": "Table column headers, metric-tile captions, the sidebar's 'Shop admin' line and the honesty chips (.adm-label). Lightly tracked and not uppercase — a column header is read, not displayed."
+      }
+    },
+    "shadows": [
+      {
+        "name": "lift",
+        "value": "0 3px 10px -4px rgba(60, 40, 72, 0.22)",
+        "purpose": "Lowest rung. The tilted orange hero plane; the quiet button on hover."
+      },
+      {
+        "name": "raised",
+        "value": "0 12px 26px -12px rgba(60, 40, 72, 0.34)",
+        "purpose": "Resting height of every card and the primary button."
+      },
+      {
+        "name": "float",
+        "value": "0 26px 52px -18px rgba(60, 40, 72, 0.42)",
+        "purpose": "Reached for. Card hover and primary-button hover only."
+      },
+      {
+        "name": "ring-inset",
+        "value": "inset 0 0 0 1px #ebdcc8",
+        "purpose": "The two documented exceptions to the one-scale rule: a border drawn as a shadow on the quiet button and the disabled checkout control, so hover never shifts layout."
+      },
+      {
+        "name": "admin-none",
+        "value": "none",
+        "purpose": "The admin's elevation, stated explicitly. .adm-card is white with a 1px --color-adm-line border and no shadow at rest or on hover — a scoped inversion of the storefront's elevation doctrine, because a screen with twenty bordered regions cannot afford twenty lit planes and operate.md asks that the tool disappear into the task. Depth in the admin is the shell/ground/surface tonal step."
+      },
+      {
+        "name": "admin-none",
+        "value": "none",
+        "purpose": "The admin's elevation, stated explicitly. .adm-card is white with a 1px --color-adm-line border and no shadow at rest or on hover — a scoped inversion of the storefront's elevation doctrine, because a screen with twenty bordered regions cannot afford twenty lit planes and operate.md asks that the tool disappear into the task. Depth in the admin is the shell/ground/surface tonal step."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-settle",
+        "value": "cubic-bezier(0.2, 0.8, 0.2, 1)",
+        "purpose": "The only easing curve in the system. Buttons, cards, tile art, and the settle animation."
+      },
+      {
+        "name": "duration-button",
+        "value": "300ms",
+        "purpose": "Button transform and shadow."
+      },
+      {
+        "name": "duration-card",
+        "value": "400ms",
+        "purpose": "Card 6px lift and shadow step Raised to Float."
+      },
+      {
+        "name": "duration-art",
+        "value": "500ms",
+        "purpose": "Illustration scale to 1.05 inside a hovered card's tile."
+      },
+      {
+        "name": "debounce-search",
+        "value": "250ms",
+        "purpose": "Delay before the search term is written to the URL via router.replace, so typing does not flood history."
+      },
+      {
+        "name": "settle",
+        "value": "settle 900ms cubic-bezier(0.2, 0.8, 0.2, 1) both, staggered 120ms",
+        "purpose": "The one authored animation: homepage hero planes ease into register on load, each preserving its own --tilt. Removed under prefers-reduced-motion."
+      },
+      {
+        "name": "duration-adm-state",
+        "value": "160ms",
+        "purpose": "Admin colour and border-colour transitions on buttons and fields."
+      },
+      {
+        "name": "duration-adm-press",
+        "value": "90ms",
+        "purpose": "The 1px translateY press on all three admin button variants — the admin's only movement, since it has no hover lift."
+      },
+      {
+        "name": "adm-shimmer",
+        "value": "adm-shimmer 1.4s ease infinite",
+        "purpose": "The skeleton sweep across --color-adm-bg. Disabled entirely under prefers-reduced-motion."
+      },
+      {
+        "name": "debounce-orders",
+        "value": "250ms",
+        "purpose": "Delay before the orders status filter and search term are written to the URL via router.replace, so a view survives refresh and tabs without flooding history."
+      },
+      {
+        "name": "duration-adm-state",
+        "value": "160ms",
+        "purpose": "Admin colour and border-colour transitions on buttons and fields."
+      },
+      {
+        "name": "duration-adm-press",
+        "value": "90ms",
+        "purpose": "The 1px translateY press on all three admin button variants — the admin's only movement, since it has no hover lift."
+      },
+      {
+        "name": "adm-shimmer",
+        "value": "adm-shimmer 1.4s ease infinite",
+        "purpose": "The skeleton sweep across --color-adm-bg. Disabled entirely under prefers-reduced-motion."
+      },
+      {
+        "name": "debounce-orders",
+        "value": "250ms",
+        "purpose": "Delay before the orders status filter and search term are written to the URL via router.replace, so a view survives refresh and tabs without flooding history."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      },
+      {
+        "name": "container",
+        "value": "1240px"
+      },
+      {
+        "name": "sticky-offset",
+        "value": "7rem"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The page's main action. Plum ground, cream type, resting at Raised elevation and rising 2px to Float on hover.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">Shop all<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"M4.5 12h15\"/><path d=\"M13.5 6l6 6-6 6\"/></svg></a>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; gap: 0.55rem; border-radius: 999px; font-family: var(--font-archivo, 'Archivo', system-ui, sans-serif); font-size: 0.875rem; font-weight: 500; line-height: 1; text-decoration: none; padding: 1rem 2rem; background-color: #3c2848; color: #ffe4c4; box-shadow: 0 12px 26px -12px rgba(60, 40, 72, 0.34); transition: transform 300ms cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 300ms cubic-bezier(0.2, 0.8, 0.2, 1), background-color 200ms ease; } .ds-btn-primary:hover { background-color: #2b1c34; transform: translateY(-2px); box-shadow: 0 26px 52px -18px rgba(60, 40, 72, 0.42); } .ds-btn-primary:focus-visible { outline: 2px solid #3c2848; outline-offset: 3px; }"
+    },
+    {
+      "name": "Quiet Button",
+      "kind": "button",
+      "refersTo": "button-quiet",
+      "description": "The secondary action. A transparent pill whose 1px ring is drawn as an inset shadow so hover does not shift layout.",
+      "html": "<a class=\"ds-btn-quiet\" href=\"#\">View all<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"M4.5 12h15\"/><path d=\"M13.5 6l6 6-6 6\"/></svg></a>",
+      "css": ".ds-btn-quiet { display: inline-flex; align-items: center; justify-content: center; gap: 0.55rem; border-radius: 999px; font-family: var(--font-archivo, 'Archivo', system-ui, sans-serif); font-size: 0.875rem; font-weight: 500; line-height: 1; text-decoration: none; padding: 0.875rem 1.5rem; background-color: transparent; color: #3c2848; box-shadow: inset 0 0 0 1px #ebdcc8; transition: transform 300ms cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 300ms cubic-bezier(0.2, 0.8, 0.2, 1), background-color 200ms ease; } .ds-btn-quiet:hover { background-color: #fffdf8; transform: translateY(-2px); box-shadow: inset 0 0 0 1px #3c2848, 0 3px 10px -4px rgba(60, 40, 72, 0.22); } .ds-btn-quiet:focus-visible { outline: 2px solid #3c2848; outline-offset: 3px; }"
+    },
+    {
+      "name": "Disabled Control",
+      "kind": "button",
+      "refersTo": "button-disabled",
+      "description": "A capability that does not exist yet, shipped as a quiet outlined pill with a label note naming the reason. Never the heaviest element in its block; no lift, no hover.",
+      "html": "<div class=\"ds-disabled-block\"><button class=\"ds-btn-disabled\" type=\"button\" disabled aria-describedby=\"ds-checkout-note\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"M12 3.5l7 3v5c0 4.2-2.9 7.6-7 9-4.1-1.4-7-4.8-7-9v-5Z\"/></svg>Checkout</button><p class=\"ds-disabled-note\" id=\"ds-checkout-note\">Payments not yet connected</p></div>",
+      "css": ".ds-disabled-block { width: 18rem; font-family: var(--font-archivo, 'Archivo', system-ui, sans-serif); } .ds-btn-disabled { display: inline-flex; align-items: center; justify-content: center; gap: 0.55rem; width: 100%; border: none; border-radius: 999px; font-family: inherit; font-size: 0.875rem; font-weight: 500; line-height: 1; padding: 0.875rem 1.75rem; background-color: transparent; color: rgba(60, 40, 72, 0.72); box-shadow: inset 0 0 0 1px #ebdcc8; cursor: not-allowed; } .ds-disabled-note { margin: 0.625rem 0 0; text-align: center; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(60, 40, 72, 0.72); }"
+    },
+    {
+      "name": "Filter Tabs",
+      "kind": "nav",
+      "refersTo": "button-filter",
+      "description": "Counter filters rendered as real links carrying aria-current, so a filtered view is a shareable URL. Selected is the primary pill; unselected is the quiet pill. The row ends in a computed count and price range behind an orange dot.",
+      "html": "<div class=\"ds-filters\"><nav class=\"ds-filter-row\" aria-label=\"Filter by counter\"><a class=\"ds-filter ds-filter-on\" href=\"#\" aria-current=\"page\">Everything</a><a class=\"ds-filter\" href=\"#\">Jewellery</a><a class=\"ds-filter\" href=\"#\">For the house</a></nav><p class=\"ds-filter-count\"><span class=\"ds-filter-dot\"></span>14 of 14 &middot; &#8377;480 to &#8377;2,740</p></div>",
+      "css": ".ds-filters { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem 1.5rem; font-family: var(--font-archivo, 'Archivo', system-ui, sans-serif); } .ds-filter-row { display: flex; flex-wrap: wrap; gap: 0.5rem; } .ds-filter { display: inline-flex; align-items: center; justify-content: center; border-radius: 999px; font-size: 0.875rem; font-weight: 500; line-height: 1; text-decoration: none; padding: 0.75rem 1.25rem; background-color: transparent; color: #3c2848; box-shadow: inset 0 0 0 1px #ebdcc8; transition: transform 300ms cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 300ms cubic-bezier(0.2, 0.8, 0.2, 1), background-color 200ms ease; } .ds-filter:hover { background-color: #fffdf8; transform: translateY(-2px); box-shadow: inset 0 0 0 1px #3c2848, 0 3px 10px -4px rgba(60, 40, 72, 0.22); } .ds-filter-on { background-color: #3c2848; color: #ffe4c4; box-shadow: 0 12px 26px -12px rgba(60, 40, 72, 0.34); } .ds-filter-on:hover { background-color: #2b1c34; box-shadow: 0 26px 52px -18px rgba(60, 40, 72, 0.42); } .ds-filter:focus-visible { outline: 2px solid #3c2848; outline-offset: 3px; } .ds-filter-count { display: flex; align-items: center; gap: 0.625rem; margin: 0; font-size: 0.875rem; color: rgba(60, 40, 72, 0.75); } .ds-filter-dot { display: block; height: 0.5rem; width: 0.5rem; border-radius: 999px; background-color: #ffa444; }"
+    },
+    {
+      "name": "Product Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "A product as an object on paper: near-white plane at Raised elevation, a warm-paper image tile, and a 6px lift to Float on hover. No border. The lift means the card goes somewhere.",
+      "html": "<a class=\"ds-card\" href=\"#\"><span class=\"ds-card-tile\"><svg viewBox=\"0 0 160 160\" width=\"100%\" height=\"100%\" aria-hidden=\"true\"><defs><radialGradient id=\"dsGround\"><stop offset=\"0%\" stop-color=\"#3c2848\" stop-opacity=\"0.2\"/><stop offset=\"100%\" stop-color=\"#3c2848\" stop-opacity=\"0\"/></radialGradient></defs><ellipse cx=\"80\" cy=\"148\" rx=\"50\" ry=\"8\" fill=\"url(#dsGround)\"/><circle cx=\"60\" cy=\"92\" r=\"34\" fill=\"none\" stroke=\"#ffe4c4\" stroke-width=\"15\"/><circle cx=\"107\" cy=\"76\" r=\"25\" fill=\"none\" stroke=\"#ffe4c4\" stroke-width=\"15\"/><g stroke=\"#3c2848\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"60\" cy=\"92\" r=\"34\" stroke-width=\"8.5\"/><circle cx=\"60\" cy=\"92\" r=\"20\" stroke-width=\"5.5\"/><circle cx=\"107\" cy=\"76\" r=\"25\" stroke-width=\"5.5\"/><circle cx=\"107\" cy=\"76\" r=\"13\" stroke-width=\"5.5\"/><path d=\"M60 58v-6M107 51v-5\" stroke-width=\"8.5\"/></g><circle cx=\"60\" cy=\"50\" r=\"6\" fill=\"#3c2848\"/><circle cx=\"107\" cy=\"45\" r=\"5\" fill=\"#3c2848\"/></svg></span><span class=\"ds-card-meta\"><span class=\"ds-card-name\">Sunday Hoops</span><span class=\"ds-card-material\">Brass, gold wash</span><span class=\"ds-card-price\">&#8377;780</span></span></a>",
+      "css": ".ds-card { display: block; width: 15rem; text-decoration: none; color: #3c2848; font-family: var(--font-archivo, 'Archivo', system-ui, sans-serif); background-color: #fffdf8; border-radius: 1.25rem; padding: 0.875rem; box-shadow: 0 12px 26px -12px rgba(60, 40, 72, 0.34); transition: transform 400ms cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 400ms cubic-bezier(0.2, 0.8, 0.2, 1); } .ds-card:hover { transform: translateY(-6px); box-shadow: 0 26px 52px -18px rgba(60, 40, 72, 0.42); } .ds-card:focus-visible { outline: 2px solid #3c2848; outline-offset: 4px; } .ds-card-tile { display: flex; align-items: center; justify-content: center; aspect-ratio: 1 / 1; overflow: hidden; padding: 1.25rem; background-color: #fbf1e2; border-radius: 0.85rem; } .ds-card-tile svg { transition: transform 500ms cubic-bezier(0.2, 0.8, 0.2, 1); } .ds-card:hover .ds-card-tile svg { transform: scale(1.05); } .ds-card-meta { display: block; padding: 1rem 0.375rem 0.25rem; } .ds-card-name { display: block; font-size: 0.875rem; font-weight: 500; line-height: 1.375; } .ds-card-material { display: block; margin-top: 0.125rem; font-size: 0.75rem; line-height: 1.375; color: rgba(60, 40, 72, 0.6); } .ds-card-price { display: block; margin-top: 0.5rem; font-size: 0.875rem; font-weight: 500; }"
+    },
+    {
+      "name": "Grid Terminal Card",
+      "kind": "card",
+      "refersTo": "card-inverted",
+      "description": "The plum end-card that fills a short 4-up row, but only when two or more cells would sit empty. Spans two columns, carries the accent button, and is the one place orange is a full field.",
+      "html": "<a class=\"ds-endcard\" href=\"#\"><span class=\"ds-endcard-title\">That is the whole shop.</span><span class=\"ds-endcard-line\">Seven to wear, seven for the house.</span><span class=\"ds-endcard-action\">Search the fourteen<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"M4.5 12h15\"/><path d=\"M13.5 6l6 6-6 6\"/></svg></span></a>",
+      "css": ".ds-endcard { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 1rem; width: 26rem; text-decoration: none; font-family: var(--font-archivo, 'Archivo', system-ui, sans-serif); background-color: #3c2848; color: #ffe4c4; border-radius: 1.25rem; padding: 2rem; box-shadow: 0 12px 26px -12px rgba(60, 40, 72, 0.34); transition: transform 400ms cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 400ms cubic-bezier(0.2, 0.8, 0.2, 1); } .ds-endcard:hover { transform: translateY(-6px); box-shadow: 0 26px 52px -18px rgba(60, 40, 72, 0.42); } .ds-endcard:focus-visible { outline: 2px solid #3c2848; outline-offset: 4px; } .ds-endcard-title { font-family: var(--font-serif, 'Instrument Serif', Georgia, serif); font-size: clamp(1.5rem, 3vw, 1.85rem); line-height: 1.1; } .ds-endcard-line { font-size: 0.875rem; color: rgba(255, 228, 196, 0.75); } .ds-endcard-action { display: inline-flex; align-items: center; gap: 0.55rem; border-radius: 999px; background-color: #ffa444; color: #2b1c34; font-size: 0.875rem; font-weight: 500; line-height: 1; padding: 0.875rem 1.5rem; }"
+    },
+    {
+      "name": "Catalogue Plane",
+      "kind": "custom",
+      "refersTo": "plane",
+      "description": "The translucent cream surface every catalogue grid rests on, so cards read as objects sitting on paper rather than floating on the page ground.",
+      "html": "<div class=\"ds-plane\"><span class=\"ds-plane-chip\">Cards sit here</span></div>",
+      "css": ".ds-plane { background-color: color-mix(in srgb, #ffe4c4 45%, transparent); border-radius: 2rem; padding: 1.75rem; min-height: 8rem; display: flex; align-items: center; justify-content: center; } .ds-plane-chip { font-family: var(--font-archivo, 'Archivo', system-ui, sans-serif); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(60, 40, 72, 0.6); }"
+    },
+    {
+      "name": "Search Field",
+      "kind": "input",
+      "refersTo": "input-search",
+      "description": "The working-size pill field with a 20px icon set into its left inset and made click-through, so the whole field is the target. No autofocus; its term is mirrored into the URL.",
+      "html": "<span class=\"ds-search\"><svg class=\"ds-search-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" width=\"20\" height=\"20\" aria-hidden=\"true\"><circle cx=\"11\" cy=\"11\" r=\"6.5\"/><path d=\"M16 16l4.5 4.5\"/></svg><input class=\"ds-search-input\" type=\"search\" placeholder=\"Brass, jhumka, vase&hellip;\" aria-label=\"Search the shop\" /></span>",
+      "css": ".ds-search { position: relative; display: block; width: 26rem; max-width: 100%; } .ds-search-icon { position: absolute; left: 1.25rem; top: 50%; transform: translateY(-50%); pointer-events: none; color: rgba(60, 40, 72, 0.72); } .ds-search-input { width: 100%; font-family: var(--font-archivo, 'Archivo', system-ui, sans-serif); font-size: 1rem; color: #3c2848; background-color: #fffdf8; border: 1px solid #ebdcc8; border-radius: 999px; padding: 1rem 1.25rem 1rem 3.5rem; transition: border-color 200ms ease; } .ds-search-input::placeholder { color: rgba(60, 40, 72, 0.7); } .ds-search-input:focus { border-color: #3c2848; outline: none; }"
+    },
+    {
+      "name": "Quantity Stepper",
+      "kind": "custom",
+      "refersTo": "stepper",
+      "description": "A hairline pill holding minus, a tabular live-announced count, and plus. The minus arm is disabled at 1 — a stepper never destroys a line; removal is the separate explicit control beside it.",
+      "html": "<span class=\"ds-stepper-row\"><span class=\"ds-stepper\"><button class=\"ds-stepper-arm\" type=\"button\" disabled aria-label=\"Reduce quantity\">&minus;</button><span class=\"ds-stepper-count\" aria-live=\"polite\">1</span><button class=\"ds-stepper-arm\" type=\"button\" aria-label=\"Increase quantity\">+</button></span><button class=\"ds-stepper-remove\" type=\"button\">Remove</button></span>",
+      "css": ".ds-stepper-row { display: inline-flex; align-items: center; gap: 1rem; font-family: var(--font-archivo, 'Archivo', system-ui, sans-serif); color: #3c2848; } .ds-stepper { display: inline-flex; align-items: center; border: 1px solid #ebdcc8; border-radius: 999px; } .ds-stepper-arm { border: none; background: none; font-family: inherit; font-size: 1rem; line-height: 1; color: inherit; padding: 0.5rem 0.875rem; cursor: pointer; } .ds-stepper-arm:hover:enabled { color: #ffa444; } .ds-stepper-arm:disabled { color: rgba(60, 40, 72, 0.35); cursor: not-allowed; } .ds-stepper-arm:focus-visible { outline: 2px solid #3c2848; outline-offset: 3px; border-radius: 0.75rem; } .ds-stepper-count { min-width: 2rem; text-align: center; font-size: 0.875rem; font-variant-numeric: tabular-nums; } .ds-stepper-remove { border: none; background: none; font-family: inherit; font-size: 0.875rem; color: rgba(60, 40, 72, 0.75); text-decoration: underline; text-underline-offset: 4px; cursor: pointer; } .ds-stepper-remove:hover { color: #ffa444; }"
+    },
+    {
+      "name": "Provisional Chip",
+      "kind": "chip",
+      "refersTo": "chip-provisional",
+      "description": "The dashed-hairline status pill that marks the artefact as unfinished. Describes the proof; never instructs the shop's owner. Any new class of placeholder content is added to its wording.",
+      "html": "<span class=\"ds-chip-provisional\">Placeholder catalogue &mdash; names, prices, materials and descriptions are stand-ins</span>",
+      "css": ".ds-chip-provisional { display: inline-block; font-family: var(--font-archivo, 'Archivo', system-ui, sans-serif); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(60, 40, 72, 0.72); border: 1px dashed rgba(60, 40, 72, 0.45); border-radius: 999px; padding: 0.375rem 0.875rem; }"
+    },
+    {
+      "name": "Proof Stamp",
+      "kind": "chip",
+      "refersTo": "chip-proof",
+      "description": "The same status device rendered solid in the accent, for the plum-deep footer where a dashed cream hairline would disappear.",
+      "html": "<span class=\"ds-chip-proof\">Proof &mdash; placeholder catalogue</span>",
+      "css": ".ds-chip-proof { display: inline-block; font-family: var(--font-archivo, 'Archivo', system-ui, sans-serif); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #2b1c34; background-color: #ffa444; border-radius: 999px; padding: 0.375rem 0.875rem; }"
+    },
+    {
+      "name": "Header Navigation",
+      "kind": "nav",
+      "refersTo": "header",
+      "description": "Sticky 4.5rem bar on translucent paper with a backdrop blur and a warm hairline rule, mounted in the root layout for every route. The current page takes a 2px orange underline; icon actions fill with the lit plane on hover; the bag is a plum pill with an orange count that renders 0 until the stored bag has been read.",
+      "html": "<header class=\"ds-header\"><span class=\"ds-header-mark\">klik</span><nav class=\"ds-header-nav\"><a href=\"#\">Jewellery</a><a href=\"#\">For the house</a><a class=\"ds-header-current\" href=\"#\" aria-current=\"page\">Everything</a></nav><span class=\"ds-header-actions\"><a class=\"ds-header-icon\" href=\"#\" aria-label=\"Search\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" width=\"20\" height=\"20\" aria-hidden=\"true\"><circle cx=\"11\" cy=\"11\" r=\"6.5\"/><path d=\"M16 16l4.5 4.5\"/></svg></a><a class=\"ds-header-bag\" href=\"#\" aria-label=\"Bag, 0 items\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"M4.5 7.5h15l-1.2 12H5.7Z\"/><path d=\"M8.75 10V6.75a3.25 3.25 0 0 1 6.5 0V10\"/></svg><span class=\"ds-header-count\">0</span></a></span></header>",
+      "css": ".ds-header { display: flex; align-items: center; gap: 1.5rem; height: 4.5rem; padding: 0 1.5rem; background-color: rgba(251, 241, 226, 0.9); backdrop-filter: blur(8px); border-bottom: 1px solid #ebdcc8; color: #3c2848; font-family: var(--font-archivo, 'Archivo', system-ui, sans-serif); } .ds-header-mark { font-family: var(--font-serif, 'Instrument Serif', Georgia, serif); font-size: 1.6rem; letter-spacing: -0.01em; } .ds-header-nav { display: flex; gap: 2rem; padding-left: 1rem; } .ds-header-nav a { font-size: 0.875rem; font-weight: 500; color: inherit; text-decoration: none; transition: opacity 200ms ease; } .ds-header-nav a:hover { opacity: 0.6; } .ds-header-current { text-decoration: underline; text-decoration-color: #ffa444; text-decoration-thickness: 2px; text-underline-offset: 6px; } .ds-header-actions { margin-left: auto; display: flex; align-items: center; gap: 0.25rem; } .ds-header-icon { display: inline-flex; padding: 0.625rem; border-radius: 999px; color: inherit; transition: background-color 200ms ease; } .ds-header-icon:hover { background-color: #fffdf8; } .ds-header-icon:focus-visible, .ds-header-bag:focus-visible { outline: 2px solid #3c2848; outline-offset: 3px; } .ds-header-bag { display: inline-flex; align-items: center; gap: 0.5rem; margin-left: 0.25rem; padding: 0.625rem 0.75rem 0.625rem 1rem; border-radius: 999px; background-color: #3c2848; color: #ffe4c4; font-size: 0.875rem; font-weight: 500; text-decoration: none; transition: background-color 200ms ease; } .ds-header-bag:hover { background-color: #2b1c34; } .ds-header-count { display: inline-flex; align-items: center; justify-content: center; height: 1.25rem; min-width: 1.25rem; padding: 0 0.25rem; border-radius: 999px; background-color: #ffa444; color: #2b1c34; font-size: 0.75rem; font-weight: 600; }"
+    },
+    {
+      "name": "Hero Planes",
+      "kind": "custom",
+      "refersTo": "card",
+      "description": "The signature depth composition and the system's only authored motion: two product planes at different heights and tilts over an orange plane, settling into register on load 120ms apart.",
+      "html": "<div class=\"ds-hero\"><span class=\"ds-hero-accent\" aria-hidden=\"true\"></span><span class=\"ds-hero-plane ds-hero-a\">Fat Little Vase</span><span class=\"ds-hero-plane ds-hero-b\">Little Jhumka</span></div>",
+      "css": ".ds-hero { position: relative; height: 21rem; width: 26rem; font-family: var(--font-archivo, 'Archivo', system-ui, sans-serif); } .ds-hero-accent { position: absolute; left: 50%; top: 3.5rem; height: 13rem; width: 13rem; transform: translateX(-50%) rotate(-9deg); border-radius: 1.25rem; background-color: #ffa444; box-shadow: 0 3px 10px -4px rgba(60, 40, 72, 0.22); } .ds-hero-plane { position: absolute; display: flex; align-items: flex-end; width: 11rem; height: 12rem; padding: 1rem; border-radius: 1.25rem; background-color: #fffdf8; color: #3c2848; font-size: 0.875rem; font-weight: 500; box-shadow: 0 12px 26px -12px rgba(60, 40, 72, 0.34); animation: ds-settle 900ms cubic-bezier(0.2, 0.8, 0.2, 1) both; } .ds-hero-a { right: 0; top: 0; --tilt: 5deg; transform: rotate(5deg); } .ds-hero-b { left: 0; top: 4rem; --tilt: -4deg; transform: rotate(-4deg); animation-delay: 120ms; } @keyframes ds-settle { from { opacity: 0; transform: translateY(18px) rotate(var(--tilt, 0deg)); } to { opacity: 1; transform: translateY(0) rotate(var(--tilt, 0deg)); } } @media (prefers-reduced-motion: reduce) { .ds-hero-plane { animation: none; } }"
+    },
+    {
+      "name": "Admin Primary Button",
+      "kind": "button",
+      "refersTo": "adm-button-primary",
+      "description": "The admin's main action. Plum ground, cream type, 0.5rem radius, no shadow; confirms itself with a 1px press rather than a lift.",
+      "html": "<button class=\"ds-adm-btn-primary\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"M12 5v14\"/><path d=\"M5 12h14\"/></svg>Add product</button>",
+      "css": ".ds-adm-btn-primary { display: inline-flex; align-items: center; justify-content: center; gap: 0.45rem; border: none; border-radius: 0.5rem; padding: 0.625rem 1rem; font-family: var(--font-archivo, 'Archivo', system-ui, sans-serif); font-size: 0.875rem; font-weight: 500; line-height: 1; background-color: #3c2848; color: #ffe4c4; cursor: pointer; transition: background-color 160ms ease, transform 90ms ease; } .ds-adm-btn-primary:hover { background-color: #2b1c34; } .ds-adm-btn-primary:active { background-color: #2b1c34; transform: translateY(1px); } .ds-adm-btn-primary:focus-visible { outline: 2px solid #3c2848; outline-offset: 3px; } .ds-adm-btn-primary:disabled { opacity: 0.5; cursor: not-allowed; }"
+    },
+    {
+      "name": "Admin Secondary Button",
+      "kind": "button",
+      "refersTo": "adm-button-secondary",
+      "description": "The admin's quiet action and its unselected filter tab. White ground, 1px admin line, plum type.",
+      "html": "<button class=\"ds-adm-btn-secondary\">Cancel</button>",
+      "css": ".ds-adm-btn-secondary { display: inline-flex; align-items: center; justify-content: center; gap: 0.45rem; border: 1px solid #e7e1d7; border-radius: 0.5rem; padding: 0.625rem 1rem; font-family: var(--font-archivo, 'Archivo', system-ui, sans-serif); font-size: 0.875rem; font-weight: 500; line-height: 1; background-color: #ffffff; color: #3c2848; cursor: pointer; transition: border-color 160ms ease, background-color 160ms ease, transform 90ms ease; } .ds-adm-btn-secondary:hover { border-color: rgba(60, 40, 72, 0.45); } .ds-adm-btn-secondary:active { background-color: #f6f3ee; transform: translateY(1px); } .ds-adm-btn-secondary:focus-visible { outline: 2px solid #3c2848; outline-offset: 3px; } .ds-adm-btn-secondary:disabled { opacity: 0.5; cursor: not-allowed; }"
+    },
+    {
+      "name": "Admin Disabled Write Control",
+      "kind": "button",
+      "refersTo": "adm-button-primary",
+      "description": "Every write-capable control in the admin: shipped disabled with the reason named beneath it. No enabled button in the panel does nothing.",
+      "html": "<div class=\"ds-adm-save\"><button class=\"ds-adm-save-btn\" disabled aria-describedby=\"why\">Save product</button><p class=\"ds-adm-save-why\" id=\"why\">Saving needs Supabase</p></div>",
+      "css": ".ds-adm-save { display: flex; flex-direction: column; gap: 0.5rem; align-items: center; font-family: var(--font-archivo, 'Archivo', system-ui, sans-serif); } .ds-adm-save-btn { width: 100%; border: none; border-radius: 0.5rem; padding: 0.625rem 1rem; font-size: 0.875rem; font-weight: 500; line-height: 1; background-color: #3c2848; color: #ffe4c4; opacity: 0.5; cursor: not-allowed; } .ds-adm-save-why { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.04em; color: rgba(60, 40, 72, 0.7); margin: 0; }"
+    },
+    {
+      "name": "Admin Field",
+      "kind": "input",
+      "refersTo": "adm-field",
+      "description": "The admin text input. White, 1px admin line, 0.5rem radius; focus is a solid plum border with a 3px 14% halo, error is driven by aria-invalid.",
+      "html": "<div class=\"ds-adm-field-wrap\"><label class=\"ds-adm-field-label\" for=\"q\">Email</label><input class=\"ds-adm-field\" id=\"q\" type=\"email\" placeholder=\"you@klik.shop\"><p class=\"ds-adm-field-err\">Enter a valid email address.</p></div>",
+      "css": ".ds-adm-field-wrap { font-family: var(--font-archivo, 'Archivo', system-ui, sans-serif); color: #3c2848; } .ds-adm-field-label { display: block; font-size: 0.875rem; font-weight: 500; line-height: 1.5; } .ds-adm-field { width: 100%; margin-top: 0.5rem; border-radius: 0.5rem; border: 1px solid #e7e1d7; background-color: #ffffff; padding: 0.625rem 0.75rem; font-size: 0.875rem; color: #3c2848; transition: border-color 160ms ease, box-shadow 160ms ease; } .ds-adm-field::placeholder { color: rgba(60, 40, 72, 0.7); } .ds-adm-field:hover { border-color: rgba(60, 40, 72, 0.4); } .ds-adm-field:focus { outline: none; border-color: #3c2848; box-shadow: 0 0 0 3px rgba(60, 40, 72, 0.14); } .ds-adm-field:disabled { background-color: #f6f3ee; color: rgba(60, 40, 72, 0.45); cursor: not-allowed; } .ds-adm-field-err { margin: 0.375rem 0 0; font-size: 0.875rem; line-height: 1.5; color: #a3341f; }"
+    },
+    {
+      "name": "Admin Card",
+      "kind": "card",
+      "refersTo": "adm-card",
+      "description": "The admin's only container: white, 1px admin line, 0.75rem radius, deliberately flat. Shown here as a metric tile — caption, plain plum figure, computed note.",
+      "html": "<div class=\"ds-adm-card\"><p class=\"ds-adm-card-cap\">Open orders</p><p class=\"ds-adm-card-fig\">4</p><p class=\"ds-adm-card-note\">₹9,240 to fulfil</p></div>",
+      "css": ".ds-adm-card { background-color: #ffffff; border: 1px solid #e7e1d7; border-radius: 0.75rem; padding: 1.25rem; font-family: var(--font-archivo, 'Archivo', system-ui, sans-serif); color: #3c2848; max-width: 15rem; } .ds-adm-card-cap { margin: 0; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.04em; color: rgba(60, 40, 72, 0.7); } .ds-adm-card-fig { margin: 0.5rem 0 0; font-size: 1.5rem; font-weight: 600; font-variant-numeric: tabular-nums; } .ds-adm-card-note { margin: 0.25rem 0 0; font-size: 0.875rem; line-height: 1.5; color: rgba(60, 40, 72, 0.7); }"
+    },
+    {
+      "name": "Status Pills",
+      "kind": "chip",
+      "refersTo": "adm-pill-new",
+      "description": "One status vocabulary for the whole panel. Every pill carries its word, and the stock pill carries its number too, so status never rests on colour alone.",
+      "html": "<div class=\"ds-adm-pills\"><span class=\"ds-adm-pill ds-adm-pill-new\">New</span><span class=\"ds-adm-pill ds-adm-pill-warn\">Packing</span><span class=\"ds-adm-pill ds-adm-pill-ok\">Shipped</span><span class=\"ds-adm-pill ds-adm-pill-settled\">Delivered</span><span class=\"ds-adm-pill ds-adm-pill-alert\">Cancelled</span><span class=\"ds-adm-pill ds-adm-pill-alert\"><span class=\"ds-adm-num\">0</span><span class=\"ds-adm-dot\">·</span>Out of stock</span></div>",
+      "css": ".ds-adm-pills { display: flex; flex-wrap: wrap; gap: 0.5rem; font-family: var(--font-archivo, 'Archivo', system-ui, sans-serif); } .ds-adm-pill { display: inline-flex; align-items: center; gap: 0.375rem; border-radius: 999px; padding: 0.25rem 0.625rem; font-size: 0.75rem; font-weight: 500; } .ds-adm-num { font-variant-numeric: tabular-nums; } .ds-adm-dot { opacity: 0.75; } .ds-adm-pill-new { background-color: #3c2848; color: #ffe4c4; } .ds-adm-pill-warn { background-color: rgba(255, 164, 68, 0.25); color: #3c2848; } .ds-adm-pill-ok { background-color: rgba(47, 111, 79, 0.12); color: #2f6f4f; } .ds-adm-pill-settled { background-color: #f6f3ee; color: rgba(60, 40, 72, 0.7); } .ds-adm-pill-alert { background-color: rgba(163, 52, 31, 0.1); color: #a3341f; }"
+    },
+    {
+      "name": "Admin Sidebar Navigation",
+      "kind": "nav",
+      "refersTo": "adm-nav-item-current",
+      "description": "Rows in the plum shell: cream at 70%, 12% cream fill plus aria-current for the current section, and an orange count badge — never a bare dot.",
+      "html": "<nav class=\"ds-adm-nav\" aria-label=\"Admin sections\"><a class=\"ds-adm-nav-row ds-adm-nav-on\" href=\"#\" aria-current=\"page\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M4 18a8 8 0 1 1 16 0\"/><path d=\"M12 14l4-4\"/></svg>Overview</a><a class=\"ds-adm-nav-row\" href=\"#\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M4 8l8-4 8 4v8l-8 4-8-4z\"/><path d=\"M4 8l8 4 8-4\"/><path d=\"M12 12v8\"/></svg>Orders<span class=\"ds-adm-nav-count\">4</span></a></nav>",
+      "css": ".ds-adm-nav { display: flex; flex-direction: column; gap: 0.25rem; background-color: #2b1c34; padding: 1rem; width: 15rem; font-family: var(--font-archivo, 'Archivo', system-ui, sans-serif); } .ds-adm-nav-row { display: flex; align-items: center; gap: 0.75rem; border-radius: 0.5rem; padding: 0.625rem 0.75rem; font-size: 0.875rem; text-decoration: none; color: rgba(255, 228, 196, 0.7); transition: background-color 160ms ease, color 160ms ease; } .ds-adm-nav-row:hover { background-color: rgba(255, 228, 196, 0.08); color: #ffe4c4; } .ds-adm-nav-on { background-color: rgba(255, 228, 196, 0.12); color: #ffe4c4; font-weight: 500; } .ds-adm-nav-count { margin-left: auto; border-radius: 999px; background-color: #ffa444; color: #2b1c34; padding: 0.125rem 0.375rem; font-size: 0.75rem; font-weight: 600; } .ds-adm-nav-row:focus-visible { outline: 2px solid #ffe4c4; outline-offset: 3px; }"
+    },
+    {
+      "name": "Stock Stepper",
+      "kind": "custom",
+      "refersTo": "adm-field",
+      "description": "The inventory adjuster. A 0.5rem enclosure holding minus, a tabular live count and plus; minus is disabled at 0, because a stepper never destroys a line.",
+      "html": "<div class=\"ds-adm-stepper\"><button type=\"button\" disabled aria-label=\"Reduce stock\">−</button><span aria-live=\"polite\">0</span><button type=\"button\" aria-label=\"Increase stock\">+</button></div>",
+      "css": ".ds-adm-stepper { display: inline-flex; align-items: center; border: 1px solid #e7e1d7; border-radius: 0.5rem; background-color: #ffffff; font-family: var(--font-archivo, 'Archivo', system-ui, sans-serif); color: #3c2848; } .ds-adm-stepper button { border: none; background: none; padding: 0.375rem 0.75rem; font-size: 0.875rem; line-height: 1; color: inherit; cursor: pointer; } .ds-adm-stepper button:hover:enabled { color: #ffa444; } .ds-adm-stepper button:disabled { color: rgba(60, 40, 72, 0.3); cursor: not-allowed; } .ds-adm-stepper span { min-width: 2.25rem; text-align: center; font-size: 0.875rem; font-variant-numeric: tabular-nums; }"
+    },
+    {
+      "name": "Admin Skeleton Row",
+      "kind": "custom",
+      "refersTo": "adm-card",
+      "description": "Loading is a skeleton of the thing. Rows at the real row height inside the real card, swept by a 1.4s shimmer, aria-hidden, and still under prefers-reduced-motion.",
+      "html": "<div class=\"ds-adm-skel-card\" aria-hidden=\"true\"><div class=\"ds-adm-skel-row\"><span class=\"ds-adm-skel ds-adm-skel-thumb\"></span><span class=\"ds-adm-skel-lines\"><span class=\"ds-adm-skel ds-adm-skel-a\"></span><span class=\"ds-adm-skel ds-adm-skel-b\"></span></span><span class=\"ds-adm-skel ds-adm-skel-c\"></span></div><div class=\"ds-adm-skel-row\"><span class=\"ds-adm-skel ds-adm-skel-thumb\"></span><span class=\"ds-adm-skel-lines\"><span class=\"ds-adm-skel ds-adm-skel-a\"></span><span class=\"ds-adm-skel ds-adm-skel-b\"></span></span><span class=\"ds-adm-skel ds-adm-skel-c\"></span></div></div>",
+      "css": ".ds-adm-skel-card { background-color: #ffffff; border: 1px solid #e7e1d7; border-radius: 0.75rem; overflow: hidden; } .ds-adm-skel-row { display: flex; align-items: center; gap: 1rem; padding: 1rem 1.25rem; border-bottom: 1px solid #e7e1d7; } .ds-adm-skel-row:last-child { border-bottom: none; } .ds-adm-skel-lines { display: flex; flex-direction: column; gap: 0.5rem; flex: 1; } .ds-adm-skel { display: block; border-radius: 0.375rem; background: linear-gradient(90deg, #f6f3ee 25%, #ece7e2 37%, #f6f3ee 63%); background-size: 400% 100%; animation: ds-adm-shimmer 1.4s ease infinite; } .ds-adm-skel-thumb { width: 2.75rem; height: 2.75rem; flex-shrink: 0; } .ds-adm-skel-a { height: 0.875rem; width: 33%; } .ds-adm-skel-b { height: 0.75rem; width: 20%; } .ds-adm-skel-c { height: 0.875rem; width: 4rem; } @keyframes ds-adm-shimmer { 0% { background-position: 100% 50%; } 100% { background-position: 0 50%; } } @media (prefers-reduced-motion: reduce) { .ds-adm-skel { animation: none; } }"
+    },
+    {
+      "name": "Honesty Chip",
+      "kind": "chip",
+      "refersTo": "adm-chip-honest",
+      "description": "The panel-wide statement in the admin top bar, and the one dashed line per surface. Dashed hairline, admin label type, plum at 70%: it describes the artefact and never instructs the shop's owner.",
+      "html": "<p class=\"ds-adm-honest\">Interface only · not connected</p>",
+      "css": ".ds-adm-honest { display: inline-block; margin: 0; border: 1px dashed rgba(60, 40, 72, 0.3); border-radius: 999px; padding: 0.375rem 0.75rem; font-family: var(--font-archivo, 'Archivo', system-ui, sans-serif); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.04em; color: rgba(60, 40, 72, 0.7); background: transparent; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Shop Made Of Its Own Mark",
+    "overview": "Klik is a conventional storefront — brand bar, sticky header, hero, category counters, catalogue grids, product pages, a bag, search, footer — whose entire colour supply is taken from `klik logo.png`. Plum is the ink, the logo's cream is the paper and the fill inside every drawing, and its orange is the one accent. Nothing on any page is a colour the mark does not already contain. The structure stays familiar on purpose; the identity does all of the distinguishing, so the logo never reads as a sticker dropped onto a theme.\n\nDepth is the second half of the identity. This world does not signal layers by outlining them or by fading things back — it stacks physical planes at measurable heights and lights them with one shadow scale. A product card is an object on paper; every catalogue grid sits on a translucent cream plane; the product page floats the object on its own sticky plane beside the description; the homepage hero has three planes at three heights and three tilts; blurred warm haze sits behind every page as atmosphere. Rounded throughout, warm throughout, restrained in motion: exactly one authored animation exists in the whole app.\n\nThe shop is now a multi-route storefront. Header and footer live in the root layout rather than in one page, so the brand bar, the sticky navigation with its current-page marker, and the disclosure footer are invariant across `/`, `/shop`, `/shop/[counter]`, `/piece/[slug]`, `/bag`, `/search` and the not-built-yet catch-all. A client bag context wraps the whole tree. Two prior worlds were built and rejected, and both are confirmed anti-references. A distinctive Indian-matchbox-litho world (Label Press) was rejected as too idiosyncratic for a brand nobody knows yet; the devices PRODUCT.md names for it are off the table. A plain white-and-plum DTC canon was rejected in the user's words as \"too one dimensional… no depth in the website as in the Z index… very template like and it doesn't look international at all.\" Anything that flattens this world back toward a white template, or that reaches for a hue outside the mark, is regression.\n\nThe app now ships **two registers of one brand**. The storefront persuades; the admin operates. Both are the same plum, cream and orange in the same Archivo, and they are deliberately not the same surface. The storefront lives in `app/(shop)/` under the brand shell — brand bar, sticky header, footer, bag context. The admin lives in `app/admin/` under its own shell — a plum sidebar, a plain top bar, no serif, no elevation, tighter radii — and sign-in sits alone in `app/(admin-auth)/` so it renders outside the authenticated chrome. Where a rule below is marked **shop-only** or **admin-only**, that scope is load-bearing and is not a contradiction waiting to be tidied: the admin's flat outlined card and its two semantic hues are *deliberate inversions*, taken because a tool disappears into the task while a storefront is the task. Flattening the admin into the shop's clothes, or dressing the shop in the admin's, is regression in both directions.",
+    "keyCharacteristics": [
+      "Every colour sampled from the logo; no fourth hue anywhere",
+      "Depth as literal elevation — one shadow scale, planes at real heights",
+      "Instrument Serif with a true italic for display, Archivo for everything else",
+      "Three display steps and nothing between them",
+      "Warm cream paper, near-white planes, plum ink",
+      "Rounded on every corner, from 0.75rem controls to 2rem planes",
+      "One authored motion moment; everything else is a state transition",
+      "Every summarising number in the app computed from the catalogue",
+      "Every grid answers a short last row the same way, from one shared rule",
+      "Controls that cannot finish are shipped disabled and say why",
+      "Two registers: a serif, lifted, clamped storefront; a sans, flat, fixed-rem admin",
+      "One honesty apparatus across both surfaces — nothing anywhere writes anything"
+    ],
+    "rules": [
+      {
+        "name": "The Mark Is The Material Rule",
+        "body": "Every colour on any Klik **shop** surface is one of the logo's three colours or a warm neutral derived from them. Introducing a fourth hue — a green success state, a blue link, a cool grey — breaks the thesis of the entire build, which is that the brand is the substance of the page rather than a badge placed on it. The shop's no-fourth-hue rule is unchanged and still absolute.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two Semantic Hues Rule (admin-only)",
+        "body": "`{colors.ok}` and `{colors.alert}` exist on admin routes and nowhere else, because `reference/operate.md` requires a state-rich semantic vocabulary that plum and orange alone cannot carry — an operator must read *cancelled* apart from *delivered* at a glance. This is a scoped adaptation a finish reviewer ruled correct, not a loosening of the shop's palette. There is no third semantic hue, and neither of these two may appear on a storefront route.",
+        "section": "colors"
+      },
+      {
+        "name": "The Word Rides With The Colour Rule (admin-only)",
+        "body": "Every status pill carries its word — \"Shipped\", \"Cancelled\", \"Low\", \"Out of stock\" — so status never rests on colour alone. A colour-only dot, swatch or bar is not a status indicator here. The stock pill goes further and carries its number too (`12 · In stock`).",
+        "section": "colors"
+      },
+      {
+        "name": "The Tool Is Not A Dashboard Rule (admin-only)",
+        "body": "Colour in the admin is confined to pills. Plum carries primary actions and the current nav row; orange carries count badges and the warning state only; metric numbers are plain plum at one weight and one size. No coloured figures, no tinted KPI cards, no charts in brand colours. This single restraint is what keeps the panel reading as a tool, and it is the easiest thing in the system to dilute one tinted number at a time.",
+        "section": "colors"
+      },
+      {
+        "name": "The Orange Never Speaks Rule",
+        "body": "Orange never carries small text on a light ground. It is a field with dark type standing on it (`{colors.plum-deep}`), a plain shape, a 2px underline, or type on plum. Orange body copy on paper is a contrast failure and a tonal one. Orange *is* permitted as a hover colour on plum type, where it is a momentary state rather than the resting reading colour.",
+        "section": "colors"
+      },
+      {
+        "name": "The Ink-Weight Rule",
+        "body": "Secondary emphasis is plum at reduced opacity, never a second grey and never a lighter hue. If a value is provisional, it drops to 72%; if it is disabled, to 35%. The colour never changes, only its weight in the ink.",
+        "section": "colors"
+      },
+      {
+        "name": "The Three Lockups Rule",
+        "body": "One lockup per ground: `/klik-lockup.png` (plum letterforms, transparent) on light grounds, `/klik-mark.png` (cream letterforms, transparent) on plum and plum-deep. `/klik-logo.png` — the original boxed plum plate — is retired and appears on no ground in the app. A boxed logo plate on a light ground is precisely the \"logo dropped on top\" effect the user objected to.",
+        "section": "colors"
+      },
+      {
+        "name": "The No Serif In The Tool Rule (admin-only)",
+        "body": "Instrument Serif appears on no admin surface. The storefront's three clamped display steps are a brand-surface device: they exist to make a headline behave like a poster. A tool's headings are labels for regions, so the admin uses fixed rem values that do not move with the viewport — a table header that resizes with the window is a readability cost with no persuasive return. No admin heading is fluid, and no admin type steps outside the four `.adm-*` classes.",
+        "section": "typography"
+      },
+      {
+        "name": "The Three Steps Rule (shop-only)",
+        "body": "There are exactly three display steps (`.display-1/2/3`) and nothing between them. Everything else uses Tailwind's default scale. No arbitrary `text-[…]` literal exists in the shop routes and none should be added; a heading that does not fit one of the three steps is a heading at the wrong level.",
+        "section": "typography"
+      },
+      {
+        "name": "The Label Is Not An Eyebrow Rule",
+        "body": "`.label` marks a footer column, a provisional-status chip, or the honest note beneath a disabled control. It is never set above a heading as a kicker or an eyebrow. A section here opens with its display heading and nothing above it. `.adm-label` is bound by the same rule: it labels a table column or captions a figure inside a metric tile, and is never set above a heading as a kicker.",
+        "section": "typography"
+      },
+      {
+        "name": "The Subtotal Is The Heaviest Thing Rule",
+        "body": "In any block that ends in a figure, the figure carries the largest type. The bag summary sets its subtotal at `.display-3` while the checkout control below it is quiet and outlined — the number the visitor came for outweighs the button they cannot yet press.",
+        "section": "typography"
+      },
+      {
+        "name": "The Sticky Clearance Rule",
+        "body": "Anything that sticks below the header sticks at `{spacing.sticky-offset}` (7rem) — the product page's object frame at `md:sticky md:top-28`, the bag summary at `lg:sticky lg:top-28`. That is the 4.5rem header plus roughly 40px of breathing room, so a stuck panel never appears welded to the bar above it. One offset, used everywhere; do not hand-tune a second.",
+        "section": "layout"
+      },
+      {
+        "name": "The Terminal Rule",
+        "body": "A 4-up grid fills its short last row with the plum `EndCard` only when **two or more** cells would sit empty — `needsTerminal(count) = ((4 - (count % 4)) % 4) >= 2`. A single trailing gap is an ordinary ragged end and needs nothing. A filled `.plane` with two empty cells reads as content that failed to load, which is the defect this exists to prevent; a terminal card dropped after a one-cell gap is padding. The predicate lives beside the `EndCard` component and is imported by the homepage, `/shop`, the counters and `/search` — a reviewer caught the same widow twice while the threshold lived in a single page file, so a new grid must import it rather than re-derive it.",
+        "section": "layout"
+      },
+      {
+        "name": "The Grid Is The Page Rule",
+        "body": "On a listing route nothing sits between the heading block and the products: display heading, one line of prose, the counter filter and a computed count, then the plane. Editorial bands belong on the homepage.",
+        "section": "layout"
+      },
+      {
+        "name": "The Table Restructures, It Does Not Scroll (admin-only)",
+        "body": "All three admin tables — recent orders, orders, inventory — are `hidden lg:block` beside a `lg:hidden` stack of cards carrying the same fields. No admin table is wrapped in `overflow-x-auto`. An earlier scrolling table pushed Inventory's stock steppers off-canvas on mobile, which is the entire purpose of that screen; a horizontally scrolled table hides its rightmost column, and the rightmost column is usually the action. A new admin table ships both forms or it does not ship.",
+        "section": "layout"
+      },
+      {
+        "name": "The Two Shells Rule",
+        "body": "Neither surface inherits the other's furniture. The storefront's header, footer and bag provider live in `app/(shop)/layout.tsx`; the admin's sidebar and top bar live in `app/admin/layout.tsx`; sign-in lives in its own `(admin-auth)` group precisely so it renders *outside* the authenticated shell — there is no navigation and no \"Sign out\" to offer someone who is not in yet. The root layout carries fonts and nothing visual.",
+        "section": "layout"
+      },
+      {
+        "name": "The Elevation-Not-Fade Rule",
+        "body": "Depth is height, scale and shadow. Opacity is never a depth signal. If an element needs to sit behind another, make it smaller and lower it — do not fade it.",
+        "section": "elevation"
+      },
+      {
+        "name": "The One Scale Rule",
+        "body": "Three shadows exist and no fourth is authored. Every raised surface picks one of Lift / Raised / Float. A bespoke `box-shadow` in a component is a defect, with two documented exceptions, both borders drawn as shadows so they do not shift layout: the quiet button's 1px inset ring and the disabled checkout control's `inset 0 0 0 1px var(--color-line)`.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Reach Rule",
+        "body": "Cards rise exactly 6px on hover with their shadow stepping Raised → Float over 400ms; buttons rise 2px over 300ms. Both use `cubic-bezier(0.2, 0.8, 0.2, 1)`. Nothing in this app moves further than 6px.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Still Card Rule",
+        "body": "The hover lift belongs to a card that is a link to somewhere else. A card that is a container the visitor works inside — the bag line, the summary panel, the product page's object frame — carries Raised at rest and does not rise. Elevation announces navigation, not the presence of a box.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Flat Tool Rule (admin-only, a deliberate inversion)",
+        "body": "The storefront's doctrine is \"depth comes from real elevation, never a flat outline\". The admin inverts it: `.adm-card` is white with a 1px `{colors.adm-line}` border and **no shadow at all**, and no admin surface uses Lift, Raised or Float. This is not the rejected DTC-canon world leaking in — it is scoped, reasoned and intentional. Shadows cost vertical space and visual noise per element, and an admin screen puts twenty bordered regions where a product page puts three; and `reference/operate.md` asks that the tool disappear into the task, which a lit, floating plane does not do. Depth in the admin is the shell/ground/surface tonal step — plum shell, warm-grey ground, white card — not light. A future session must not \"fix\" the admin by giving it the shop's shadow scale, and must not carry the admin's flat outline back onto a shop surface.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Press Is The Feedback Rule (admin-only)",
+        "body": "With no elevation to change, an admin control confirms itself by moving: all three button variants take `transform: translateY(1px)` on `:active`. That 1px press is the admin's entire motion vocabulary alongside the skeleton shimmer; there are no hover lifts anywhere in the panel.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Two Radius Scales Rule",
+        "body": "The shop's ladder (0.75rem controls, 0.85rem tiles, 1.25rem cards, 2rem planes, 999px pills) governs shop surfaces. The admin runs its own tighter ladder — `{rounded.adm-card}` for cards and sections, `{rounded.adm-control}` for buttons, fields and steppers, `{rounded.adm-sm}` for skeleton bars and thumbnails — because a tool's controls sit closer together and a large radius on a dense row reads as slack. Pills survive the crossing intact: every status pill, count badge and honesty chip is 999px on both surfaces. Do not use a shop radius on an admin control or the reverse.",
+        "section": "shapes"
+      },
+      {
+        "name": "The Focus Ring Owns No Radius Rule",
+        "body": "The global `:focus-visible` sets a 2px plum outline at 3px offset and **deliberately sets no `border-radius`**. The outline follows the element's own corner. An earlier version set a radius on the focus rule and visibly reshaped focused buttons mid-interaction; do not reintroduce it in either register.",
+        "section": "shapes"
+      },
+      {
+        "name": "The Single Inset Rule",
+        "body": "A framed object gets one inset, not two. The product page's object card and the tile inside it each carry `p-3 sm:p-4`, deliberately lighter than the catalogue card's `p-3.5` / tile `p-5`, because a doubled inset made the frame read as the subject instead of the object. When nesting a plane inside a plane, reduce the padding rather than repeat it.",
+        "section": "shapes"
+      }
+    ],
+    "dos": [
+      "Do take every new colour from the mark: plum `{colors.plum}`, cream `{colors.cream}`, orange `{colors.orange}`, or a warm neutral derived from them.",
+      "Do express depth as elevation — pick one of Lift / Raised / Float and set the element's height and scale.",
+      "Do compute anything that summarises the shop from `lib/catalog.ts`, never write it in prose. The piece count, `priceFloor`, `priceCeiling`, per-counter ranges and the material vocabulary (`materialRange` + `sentenceList`) are all derived, and the vocabulary is filtered against `PIECES` so an unstocked material cannot reach the page.",
+      "Do read a price from the catalogue at render. The bag stores quantities keyed by slug and nothing else, under `klik.bag.v1`; a stored price is a price that can disagree with the shop.",
+      "Do gate any persisted client state behind a `ready` flag so the server and first client render are identical, and drop unknown slugs on load. The header count renders 0 until the bag has been read.",
+      "Do put a result set in the URL. Search syncs `q` through a debounced `router.replace`, initialises from `useSearchParams` and is wrapped in `Suspense`, so a result set is linkable and survives back and refresh.",
+      "Do import `needsTerminal` from `components/end-card` for any new 4-up grid rather than re-deriving the threshold.",
+      "Do use `/klik-lockup.png` on light grounds and `/klik-mark.png` on plum and plum-deep.",
+      "Do keep footer and below-the-fold imagery `loading=\"eager\"`. The lazy path left the mark unpainted in captures; this is deliberate, not an oversight to tidy away.",
+      "Do name the provisional honestly with a status chip that describes the artefact, and keep its voice pointed at the reader of the proof, never at the shop's owner.",
+      "Do add any new class of placeholder content to the disclosure line in the footer and on the listing chip. It currently names names, prices, materials, descriptions and illustrations.",
+      "Do give a new illustration a `scale` that matches its real-world size and keep it on the shared palette.",
+      "Do state what does not exist yet — \"Terms not yet published\", \"Not yet measured\" — as a row, rather than omitting the row and implying the answer is elsewhere.",
+      "Do describe a piece by what it is, what it is made of and how that material behaves in use.",
+      "Do keep the two registers apart on purpose: serif, clamped and lifted on the shop; sans, fixed-rem and flat in the admin. Read the scope tag on a rule before applying it to the other surface.",
+      "Do compute every admin figure too — order totals, item counts, stock value, open-order value, restock counts — from `lib/catalog.ts` and `lib/admin-data.ts`. No number anywhere in this app is typed into markup.",
+      "Do give every new admin control its full set of states: default, hover, `:focus-visible`, `:active` (the 1px press), disabled, and error where a field can be wrong.",
+      "Do ship an admin table in both forms — a `lg:` table and a stacked card list below it — carrying the same fields and the same actions.",
+      "Do make a status pill carry its word, and its number where it has one.",
+      "Do put a queue's filter and search in the URL through a debounced `router.replace`, initialised from `useSearchParams` inside `Suspense`.",
+      "Do show a skeleton shaped like the content it replaces, from `components/admin/skeletons.tsx`, mounted by the route's `loading.tsx`.",
+      "Do read persisted client state through a module-level store and `useSyncExternalStore`, with an empty server snapshot and a real client one (`lib/bag.tsx`). Hydrating storage inside an effect cascades a second render and trips `react-hooks/set-state-in-effect`.",
+      "Do state the limit at the point of use, once, and name the backend that would remove it."
+    ],
+    "donts": [
+      "Don't introduce a fourth hue for any reason, including status, error and success states. Use ink weight, the accent, or the plum/cream inversion.",
+      "Don't set small text in orange on a light ground.",
+      "Don't use `/klik-logo.png`, the boxed plum plate. A logo on a plate over a light ground is the exact effect the palette rebuild was done to remove.",
+      "Don't use opacity to push something back in space. Depth is size and height.",
+      "Don't author a fourth shadow, a hard offset shadow, or a flat halo. This world is lit, not printed.",
+      "Don't add a display size between the three steps, and don't reintroduce arbitrary `text-[…]` values.",
+      "Don't set `.label` as a kicker or eyebrow above a heading.",
+      "Don't write where a piece was made, who made it, or where its material came from. Descriptions describe the object and its material only; sourcing and provenance are undecided in PRODUCT.md, and claims of that class were removed twice in review — including two that predated the storefront batch.",
+      "Don't let a quantity control destroy a line. `−` is disabled at 1; removal is an explicit, separately named control.",
+      "Don't ship an enabled control for a capability that does not exist. Ship it disabled with a `.label` note naming the reason, and never make it the heaviest element in its block.",
+      "Don't hover-lift a card the visitor works inside. The lift means \"this goes somewhere\".",
+      "Don't double the inset when nesting a frame inside a frame.",
+      "Don't drop a terminal card after a single trailing gap, and don't leave two or more empty cells in a filled plane.",
+      "Don't flatten a section to a plain white ground with an outline standing in for structure — that is the rejected DTC-canon world (\"no depth… very template like\").",
+      "Don't reach for the rejected Label Press vocabulary PRODUCT.md names (matchbox-litho registration marks, printed plates, halftone). That world was declined as too idiosyncratic for a new brand.",
+      "Don't add a second authored animation. `.settle` is the only one; everything else is a state transition under 500ms.",
+      "Don't colour-code an illustration per product, and don't put orange in a drawing that is not on fire.",
+      "Don't give the admin the storefront's shadow scale, serif display steps, fluid clamps, warm paper ground or haze. The flat, white, fixed-rem register is the decision, not an unfinished edge.",
+      "Don't carry `{colors.ok}` or `{colors.alert}` onto a storefront route, and don't add a third semantic hue to the admin. Two, scoped, is the whole allowance.",
+      "Don't colour a metric number, tint a KPI card, or let colour into the admin anywhere but a pill, a count badge and the primary action.",
+      "Don't set a `border-radius` inside the `:focus-visible` rule; the outline follows the element's own corner.",
+      "Don't wrap an admin table in `overflow-x-auto`. Restructure it into cards below `lg` instead — a scrolled table hides its action column.",
+      "Don't put a bare status dot on a nav row. Show a count, or show nothing.",
+      "Don't let a stepper destroy a line, in the bag or in inventory: `−` is disabled at its floor and removal is a separately named control.",
+      "Don't ship an enabled control in the admin. Every write is disabled and says what it needs; an enabled button that silently does nothing is the one dishonest thing this build refuses.",
+      "Don't thin, multiply or drop the honesty apparatus. One panel-wide chip, one line per surface, one named reason per disabled control."
+    ]
+  }
+}
