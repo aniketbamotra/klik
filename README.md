@@ -70,10 +70,11 @@ where id = (select id from auth.users where email = 'you@example.com');
 
 3. Sign in at `/admin/sign-in`.
 
-> **Email confirmation is off for v1** (Authentication → Providers → Email →
-> Confirm email). Sign-up returns a session and the shopper is signed straight
-> in. If you turn it back on, configure a real SMTP provider first — Supabase's
-> built-in one is rate limited to a handful of messages an hour.
+> **Email confirmation is still on — turn it off for v1** in Authentication →
+> Providers → Email → Confirm email. Until then the project uses Supabase's
+> built-in SMTP, which is rate limited to a handful of messages an hour, so
+> sign-ups stall on "check your email". Once it is off, sign-up returns a
+> session and the shopper is signed straight in; no code change is needed.
 
 ## How the data is protected
 
