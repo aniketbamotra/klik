@@ -104,20 +104,6 @@ proxy.ts        session refresh on every request (Next 16's middleware)
 Regenerate `lib/supabase/database.types.ts` after any migration rather than
 hand-editing it.
 
-## Unapplied migrations
-
-`supabase-pending-migrations.sql` at the project root holds two migrations that
-could not be applied — the Supabase project host stopped resolving mid-session.
-**Apply both, in order, before running the app**, or product saves will fail on
-a missing `dimensions` column and cancelling an order will not return its stock:
-
-- `klik_restock_on_cancel` — trigger returning stock when an order is cancelled
-- `klik_product_dimensions` — `products.dimensions`, free text
-
-Then regenerate `lib/supabase/database.types.ts`. The `dimensions` column was
-hand-added to that file so the build would pass; the generated version should
-replace it. Delete the SQL file once both are applied.
-
 ## Still not connected
 
 Payment. Checkout records a real order and reserves stock, but takes no card —
