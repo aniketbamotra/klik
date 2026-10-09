@@ -1,0 +1,15 @@
+# Netlify detects Next.js and installs its OpenNext adapter automatically, so
+# there is no plugin entry here. This file only pins what the dashboard would
+# otherwise infer, so a fresh site builds the same way.
+#
+# Set NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY in the
+# Netlify UI, not here. They must be present at build time: both are inlined
+# into the client bundle, and next.config.ts reads the URL to allow product
+# images from Supabase Storage.
+
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "22"
