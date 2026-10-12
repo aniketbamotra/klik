@@ -2,15 +2,16 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { PageHead } from "@/components/admin/page-head";
 import { ProductForm, WithdrawForm } from "@/components/admin/product-form";
-import { ImageUpload } from "@/components/admin/image-upload";
 import { getProductBySlug, listProductImages } from "@/lib/data/products";
 
 export default async function EditProduct({
   params,
+  searchParams,
 }: {
   params: Promise<{ slug: string }>;
+  searchParams: Promise<{ photos?: string }>;
 }) {
-  const { slug } = await params;
+  const [{ slug }, { photos }] = await Promise.all([params, searchParams]);
   const product = await getProductBySlug(slug);
   if (!product) notFound();
 
@@ -31,28 +32,17 @@ export default async function EditProduct({
         }
       />
 
-      <ProductForm product={product} />
-
-      {/* Outside the product form on purpose: forms cannot nest, and neither
-          uploading nor withdrawing should wait on the rest of the fields. */}
-      <WithdrawForm slug={product.slug} />
-
-      <section className="adm-card mt-5 p-5 sm:p-6">
-        <h2 className="adm-h2">Photographs</h2>
-        <p className="adm-body mt-1 text-plum/70">
-          The shop draws every piece until real photography exists. Uploads are
-          stored against this product.
+      {photos === "failed" && (
+        <p role="alert" className="adm-card adm-body mb-5 border-alert/40 p-4 text-alert">
+          The piece was saved, but its photographs could not be attached. Add
+          them again below.
         </p>
-        <div className="mt-5">
-          {/* keyed on the stored count: a successful upload remounts this and
-              the staged preview clears against the server's own list */}
-          <ImageUpload
-            key={images.length}
-            productId={product.id}
-            images={images}
-          />
-        </div>
-      </section>
+      )}
+
+      <ProductForm product={product} images={images} />
+
+      {/* Outside the product form on purpose: forms cannot nest. */}
+      <WithdrawForm slug={product.slug} />
     </>
   );
 }

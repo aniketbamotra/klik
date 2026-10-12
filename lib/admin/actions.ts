@@ -85,8 +85,22 @@ export async function saveProduct(
     return { notice: "Saved." };
   }
 
-  const { error } = await supabase.from("products").insert(product);
+  /* The form generated this id so photographs could upload into the piece's
+     folder before it existed. Only a well-formed uuid is accepted. */
+  const id = String(formData.get("product_id") ?? "");
+  if (!UUID.test(id)) return { error: "The form is out of date. Reload the page and try again." };
+
+  const { error } = await supabase.from("products").insert({ ...product, id });
   if (error) return { error: friendly(error.message) };
+
+  const paths = formData.getAll("image_path").map(String);
+  const alts = formData.getAll("image_alt").map(String);
+  if (paths.length > 0) {
+    const { error: imageError } = await insertImages(supabase, id, paths, 0, alts);
+    // the piece exists either way; say so on its page rather than here, where
+    // a retry would try to create it twice
+    if (imageError) redirect(`/admin/products/${product.slug}?photos=failed`);
+  }
 
   redirect(`/admin/products/${product.slug}`);
 }
@@ -147,75 +161,80 @@ export async function setOrderStatus(
 
 /* ---------------------------------------------------------- photographs -- */
 
-export async function uploadProductImage(
-  _prev: ActionState,
-  formData: FormData,
+/* The files themselves are uploaded from the browser straight to Storage (see
+   lib/admin/upload.ts); these actions only record and arrange them. */
+
+const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/;
+
+/** A path must sit in this product's own folder, as uploadPhoto writes it. */
+const PHOTO_PATH = (productId: string) =>
+  new RegExp(`^${productId}/[0-9a-f-]{36}\\.(jpg|png|webp|avif)$`);
+
+async function insertImages(
+  supabase: Awaited<ReturnType<typeof createClient>>,
+  productId: string,
+  paths: string[],
+  firstOrder: number,
+  alts: string[] = [],
+): Promise<{ error: string | null }> {
+  const valid = PHOTO_PATH(productId);
+  if (!paths.every((p) => valid.test(p))) return { error: "That photograph was not uploaded here." };
+
+  const { error } = await supabase.from("product_images").insert(
+    paths.map((path, i) => ({
+      product_id: productId,
+      path,
+      alt: (alts[i] ?? "").trim(),
+      sort_order: firstOrder + i,
+    })),
+  );
+  return { error: error ? friendly(error.message) : null };
+}
+
+/** Records photographs already uploaded to this product's folder. */
+export async function attachProductImages(
+  productId: string,
+  paths: string[],
 ): Promise<ActionState> {
   await requireAdmin();
-
-  const productId = String(formData.get("product_id") ?? "");
-  const file = formData.get("file");
-  if (!productId) return { error: "Save the piece before adding photographs." };
-  if (!(file instanceof File) || file.size === 0) return { error: "Choose a file first." };
+  if (!UUID.test(productId) || paths.length === 0) return { error: "Nothing to add." };
 
   const supabase = await createClient();
 
-  const extension = file.name.split(".").pop()?.toLowerCase() ?? "jpg";
-  const path = `${productId}/${crypto.randomUUID()}.${extension}`;
-
   /* Append rather than default to 0. With every row at 0 the "main" photograph
-     was whichever the database happened to return first, which could change
-     between requests. */
+     was whichever the database happened to return first. */
   const { count } = await supabase
     .from("product_images")
     .select("id", { count: "exact", head: true })
     .eq("product_id", productId);
 
-  const { error: uploadError } = await supabase.storage
-    .from(BUCKET)
-    .upload(path, file, { contentType: file.type, upsert: false });
-
-  if (uploadError) return { error: `Could not upload that: ${uploadError.message}` };
-
-  const { error } = await supabase
-    .from("product_images")
-    .insert({ product_id: productId, path, alt: "", sort_order: count ?? 0 });
-
+  const { error } = await insertImages(supabase, productId, paths, count ?? 0);
   if (error) {
-    // do not leave an orphan in the bucket if the row could not be written
-    await supabase.storage.from(BUCKET).remove([path]);
-    return { error: friendly(error.message) };
+    // do not leave orphans in the bucket if the rows could not be written
+    await supabase.storage.from(BUCKET).remove(paths);
+    return { error };
   }
 
   refresh();
-  return { notice: "Photograph added." };
+  return {};
 }
 
-export async function setImageAlt(
-  _prev: ActionState,
-  formData: FormData,
-): Promise<ActionState> {
+export async function setImageAlt(id: string, alt: string): Promise<ActionState> {
   await requireAdmin();
 
-  const id = String(formData.get("image_id") ?? "");
-  const alt = String(formData.get("alt") ?? "").trim();
-  if (!id) return { error: "Which photograph?" };
-
   const supabase = await createClient();
-  const { error } = await supabase.from("product_images").update({ alt }).eq("id", id);
+  const { error } = await supabase
+    .from("product_images")
+    .update({ alt: alt.trim() })
+    .eq("id", id);
   if (error) return { error: friendly(error.message) };
 
-  refresh();
-  return { notice: "Saved." };
+  return {};
 }
 
 /** Promote one photograph to the front of the set. */
-export async function makeImageMain(formData: FormData) {
+export async function makeImageMain(id: string, productId: string) {
   await requireAdmin();
-
-  const id = String(formData.get("image_id") ?? "");
-  const productId = String(formData.get("product_id") ?? "");
-  if (!id || !productId) return;
 
   const supabase = await createClient();
 
@@ -240,16 +259,12 @@ export async function makeImageMain(formData: FormData) {
   refresh();
 }
 
-export async function deleteProductImage(formData: FormData) {
+export async function deleteProductImage(id: string, path: string) {
   await requireAdmin();
 
-  const id = String(formData.get("image_id") ?? "");
-  const path = String(formData.get("path") ?? "");
-  if (!id) return;
-
   const supabase = await createClient();
-  await supabase.from("product_images").delete().eq("id", id);
-  if (path) await supabase.storage.from(BUCKET).remove([path]);
+  const { error } = await supabase.from("product_images").delete().eq("id", id);
+  if (!error && path) await supabase.storage.from(BUCKET).remove([path]);
 
   refresh();
 }
